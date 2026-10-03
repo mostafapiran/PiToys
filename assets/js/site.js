@@ -33,7 +33,8 @@
     let visibleCount = 0;
 
     products.forEach((product) => {
-      const isVisible = collection === "all" || product.dataset.collection === collection;
+      const collections = product.dataset.collection.split(/\s+/);
+      const isVisible = collection === "all" || collections.includes(collection);
       product.hidden = !isVisible;
       if (isVisible) visibleCount += 1;
     });
