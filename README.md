@@ -1,20 +1,34 @@
-# PiToys Website
+# PiToys
 
-Static website for PiToys, ready for GitHub Pages.
+سایت استاتیک فارسی PiToys؛ بدون build step و آمادهٔ انتشار با GitHub Pages.
 
-## Files
-- `index.html` — complete website (HTML/CSS/JS in one file)
-- `assets/favicon.svg` — site icon
-- `assets/images/` — place real product images here later
+## ساختار پروژه
 
-## GitHub Pages
-1. Create a public repository, e.g. `pitoys-site`.
-2. Upload all files from this folder.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select `main` and `/ (root)`, then Save.
-6. GitHub Pages will publish the site.
+- `index.html` محتوای صفحه، اطلاعات سئو و کارت‌های معنایی محصولات را نگه می‌دارد.
+- `assets/css/site.css` استایل‌ها، رنگ‌ها و breakpointهای واکنش‌گرا را نگه می‌دارد.
+- `assets/js/site.js` فقط رفتارهای سمت کاربر مثل فیلتر کاتالوگ و منوی موبایل را مدیریت می‌کند.
+- `assets/` شامل favicon و آیکن‌های محلی شبکه‌های اجتماعی است.
+- `images/` شامل عکس بنر، مدل‌ها، پک‌ها و لوگوی PiToys است.
+- `robots.txt` و `sitemap.xml` برای خزنده‌های جست‌وجو هستند.
+- `CNAME` دامنهٔ سفارشی `pitoys.ir` را برای GitHub Pages مشخص می‌کند.
 
-No server, database, PHP, Python, or build system is required.
+## افزودن یا ویرایش محصول
 
-test
+کارت‌های مدل و پک در `index.html` قرار دارند تا متن و تصویر بدون JavaScript هم قابل‌مشاهده و ایندکس باشند. برای افزودن مدل، یک `article` با ویژگی `data-product-card` و `data-collection` کپی کنید؛ مقدار مجموعه باید با یکی از فیلترهای همان صفحه هماهنگ باشد. شمارنده با فیلترها به‌روزرسانی می‌شود. برای تغییر ظاهر، `assets/css/site.css` را ویرایش کنید؛ برای رفتار منو یا فیلتر، `assets/js/site.js` را تغییر دهید.
+
+نام فایل تصویر را دقیقاً با حروف بزرگ و کوچک موجود در Git وارد کنید. فاصلهٔ نام فایل در HTML به صورت `%20` نوشته می‌شود؛ GitHub Pages به حروف بزرگ و کوچک حساس است.
+
+## انتشار با GitHub Pages
+
+1. در تنظیمات مخزن، **Settings → Pages** را باز کنید.
+2. در **Build and deployment** گزینهٔ **Deploy from a branch** را انتخاب کنید.
+3. شاخهٔ `main` و پوشهٔ `/ (root)` را برای انتشار تنظیم کنید.
+4. دامنهٔ `pitoys.ir` در `CNAME` ثبت شده است؛ رکوردهای DNS دامنه باید مطابق تنظیمات GitHub Pages باشند.
+
+فایل `index.html` باید در ریشه بماند. مسیرهای دارایی‌ها عمداً نسبی هستند تا در دامنهٔ سفارشی و آدرس پروژهٔ GitHub Pages کار کنند. فایل `.nojekyll` موجود را نیز نگه دارید؛ برای این سایت به build مبتنی بر Jekyll نیازی نیست.
+
+## پیش‌نمایش و محدودیت فروش
+
+برای پیش‌نمایش، `index.html` را در مرورگر باز کنید؛ build یا نصب dependency لازم نیست. GitHub Pages میزبان فایل استاتیک است و بک‌اند، پایگاه داده یا پرداخت سمت سرور اجرا نمی‌کند. سایت فعلاً کاتالوگ و مسیر استعلام از Instagram است، نه سبد خرید یا درگاه پرداخت.
+
+قیمت، موجودی، روش پرداخت، زمان و هزینهٔ ارسال، ردهٔ سنی و مشخصات فنی را فقط پس از تأیید PiToys منتشر کنید. هرگز کلید محرمانهٔ درگاه یا اطلاعات خصوصی را در HTML و JavaScript قرار ندهید. برای پرداخت آنلاین واقعی به سرویس و بک‌اند سازگار نیاز است.

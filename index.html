@@ -3,188 +3,236 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171717">
-  <meta name="description" content="PiToys — Tiny Toys, Big Smiles! عروسک‌ها و اسباب‌بازی‌های کوچک چاپ سه‌بعدی">
-  <title>PiToys | Tiny Toys, Big Smiles!</title>
+  <meta name="theme-color" content="#28634f">
+  <meta name="description" content="مدل‌ها و پک‌های عروسک کوچک PiToys؛ طراحی فانتزی و چاپ سه‌بعدی. عکس مدل‌ها را ببینید و برای قیمت و موجودی استعلام بگیرید.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://pitoys.ir/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:site_name" content="PiToys">
+  <meta property="og:title" content="PiToys | عروسک‌های کوچک چاپ سه‌بعدی">
+  <meta property="og:description" content="مدل‌ها و پک‌های عروسک کوچک PiToys را ببینید و برای قیمت و موجودی استعلام بگیرید.">
+  <meta property="og:url" content="https://pitoys.ir/">
+  <meta property="og:image" content="https://pitoys.ir/images/baner.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>PiToys | عروسک‌های کوچک چاپ سه‌بعدی</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <style>
-    :root{
-      --bg:#faf8f4; --paper:#fff; --ink:#171717; --muted:#6e6a64;
-      --accent:#ff6b35; --accent2:#ffd166; --line:#e9e4dc;
-      --shadow:0 18px 50px rgba(23,23,23,.08); --radius:24px;
+  <link rel="preload" as="image" href="images/baner.jpg">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PiToys",
+      "url": "https://pitoys.ir/",
+      "logo": "https://pitoys.ir/images/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/pi.toys/",
+        "https://t.me/pi_toys"
+      ]
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(1120px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:20;background:rgba(250,248,244,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(233,228,220,.8)}
-    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px;letter-spacing:.2px}
-    .brand img{width:54px;height:54px;object-fit:contain}
-    .navlinks{display:flex;gap:26px;color:#4f4b46;font-size:14px}
-    .navlinks a:hover{color:var(--accent)}
-    .nav-cta{background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;font-size:13px}
-    .hero{padding:74px 0 55px}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
-    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:999px;font-size:12px;color:#59544d}
-    .dot{width:7px;height:7px;background:var(--accent);border-radius:50%}
-    h1{font-size:clamp(42px,7vw,76px);line-height:1.05;margin:20px 0 18px;letter-spacing:-2px}
-    .hero h1 span{color:var(--accent)}
-    .lead{font-size:18px;color:var(--muted);max-width:590px}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:14px;font-weight:800;font-size:14px;border:1px solid var(--line);background:#fff}
-    .btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
-    .btn:hover{transform:translateY(-1px)}
-    .hero-art{min-height:390px;aspect-ratio:1;border-radius:34px;background:#f2dfb6;position:relative;overflow:hidden;box-shadow:var(--shadow)}
-    .hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-    .badge{position:absolute;bottom:22px;right:24px;background:#fff;border:1px solid var(--line);padding:8px 12px;border-radius:12px;font-size:12px;font-weight:800}
-    section{padding:74px 0}
-    .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}
-    .section-head h2{font-size:34px;margin:0}.section-head p{margin:0;color:var(--muted);max-width:540px}
-    .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 8px 28px rgba(23,23,23,.04)}
-    .product-img{aspect-ratio:1;border-radius:18px;background:#f4efe7;overflow:hidden}
-    .product-img img{display:block;width:100%;height:100%;object-fit:cover}
-    .card h3{margin:14px 0 3px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:13px}
-    .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .pack{background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-    .pack-image{display:block;width:100%;aspect-ratio:1;object-fit:cover}
-    .pack-copy{padding:16px 18px 20px}
-    .pack small{color:var(--muted)}.pack h3{margin:6px 0;font-size:20px}.pack p{margin:0;color:var(--muted);font-size:12px}
-    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}
-    .about-box{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
-    .about-box.dark{background:var(--ink);color:#fff}
-    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
-    .fact{border:1px solid var(--line);border-radius:16px;padding:15px;background:#fff}.fact strong{display:block;font-size:22px}.fact span{font-size:11px;color:var(--muted)}
-    .social{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .social-card{padding:30px;border-radius:var(--radius);border:1px solid var(--line);background:#fff}
-    .social-card h3{display:flex;align-items:center;gap:10px;margin-top:0;font-size:23px}.social-card p{color:var(--muted)}
-    .social-brand-icon{width:28px;height:28px;flex:none}
-    footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:12px}
-    footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-    .floating{position:fixed;bottom:18px;left:18px;z-index:15;background:var(--accent);color:#fff;border-radius:999px;padding:11px 16px;font-size:12px;font-weight:900;box-shadow:0 10px 25px rgba(255,107,53,.25)}
-    @media(max-width:800px){
-      .navlinks{display:none}.hero{padding-top:45px}.hero-grid,.about{grid-template-columns:1fr}
-      .hero-art{min-height:300px}.cards,.packs{grid-template-columns:1fr 1fr}.social{grid-template-columns:1fr}
-      h1{letter-spacing:-1px}.section-head{display:block}.section-head p{margin-top:8px}
-    }
-    @media(max-width:520px){.cards,.packs{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.hero-art{min-height:280px}}
-  </style>
+  </script>
 </head>
 <body>
-<header>
-  <div class="container">
-    <nav>
-      <a class="brand" href="#"><img src="images/logo.png" alt="PiToys"></a>
-      <div class="navlinks">
-        <a href="#products">محصولات</a><a href="#packs">پک‌ها</a><a href="#about">درباره ما</a><a href="#contact">ارتباط</a>
-      </div>
-      <a class="nav-cta" href="https://www.instagram.com/pi.toys" target="_blank" rel="noopener">Instagram ↗</a>
+<a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="#top" aria-label="PiToys، صفحه اصلی">
+      <img src="images/logo.png" alt="PiToys">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="باز کردن فهرست" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="primary-navigation" aria-label="فهرست اصلی">
+      <a href="#products">مدل‌ها</a>
+      <a href="#packs">پک‌ها</a>
+      <a href="#about">درباره PiToys</a>
+      <a href="#faq">راهنمای سفارش</a>
     </nav>
+    <a class="nav-cta" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer">
+      <img src="assets/instagram.svg" alt="">
+      استعلام سفارش
+    </a>
   </div>
 </header>
 
-<main>
-  <section class="hero">
+<main id="main-content">
+  <section class="hero" id="top" aria-labelledby="hero-title">
     <div class="container hero-grid">
-      <div>
-        <span class="eyebrow"><span class="dot"></span> طراحی و ساخت عروسک‌های کوچک</span>
-        <h1>Tiny Toys,<br><span>Big Smiles!</span></h1>
-        <p class="lead">عروسک‌های کوچک و دوست‌داشتنی PiToys با طراحی فانتزی و تولید سه‌بعدی؛ برای هدیه، کلکسیون و لحظه‌های کوچکِ خوشحال‌کننده.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#products">دیدن محصولات</a>
-          <a class="btn" href="https://t.me/pi_toys" target="_blank" rel="noopener">کانال تلگرام ↗</a>
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> کالکشن‌های کوچک PiToys</span>
+        <h1 id="hero-title">یک شخصیت کوچک،<br><span>یک لبخند بزرگ</span></h1>
+        <p class="hero-lead">عروسک‌های فانتزی PiToys با چاپ سه‌بعدی؛ مدل‌ها را ببینید، مجموعهٔ دلخواهتان را پیدا کنید و برای قیمت و موجودی پیام بدهید.</p>
+        <div class="hero-actions">
+          <a class="button" href="#products">دیدن مدل‌ها</a>
+          <a class="button secondary" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/instagram.svg" alt="">
+            استعلام در اینستاگرام
+          </a>
         </div>
+        <p class="hero-note">قیمت و جزئیات ارسال را پیش از نهایی‌کردن سفارش مستقیم هماهنگ کنید.</p>
       </div>
       <div class="hero-art">
-        <img src="images/baner.jpg" alt="بنر PiToys با عروسک‌های رنگارنگ">
-        <div class="badge">3D Printed • Made with care</div>
+        <img src="images/baner.jpg" alt="بنر عروسک‌های رنگارنگ PiToys" fetchpriority="high" decoding="async">
       </div>
     </div>
   </section>
 
-  <section id="products">
+  <div class="proof-strip" aria-label="ویژگی‌های PiToys">
+    <div class="container proof-list">
+      <div class="proof-item"><span class="proof-mark" aria-hidden="true">3D</span><span>ساخته‌شده با چاپ سه‌بعدی</span></div>
+      <div class="proof-item"><span class="proof-mark" aria-hidden="true">6</span><span>شش مجموعهٔ موضوعی برای انتخاب</span></div>
+      <div class="proof-item"><span class="proof-mark" aria-hidden="true">π</span><span>۱۷ مدل فعلی در مجموعه</span></div>
+    </div>
+  </div>
+
+  <section id="products" aria-labelledby="products-title">
     <div class="container">
-      <div class="section-head">
-        <h2>محصولات PiToys</h2>
-        <p>مدل‌های تکی را ببینید؛ هر عکس، یکی از عروسک‌های واقعی مجموعه PiToys را نشان می‌دهد.</p>
-      </div>
-      <div class="cards">
-        <article class="card"><div class="product-img"><img src="images/Black.jpg" alt="عروسک Toothless مشکی" loading="lazy"></div><h3>Toothless مشکی</h3><p>از خانواده Toothless</p></article>
-        <article class="card"><div class="product-img"><img src="images/White.jpg" alt="عروسک Toothless سفید" loading="lazy"></div><h3>Toothless سفید</h3><p>از خانواده Toothless</p></article>
-        <article class="card"><div class="product-img"><img src="images/Panda.jpg" alt="عروسک پاندا" loading="lazy"></div><h3>پاندا</h3><p>از مجموعه Lazy Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Koala.jpg" alt="عروسک کوالا" loading="lazy"></div><h3>کوالا</h3><p>از مجموعه Lazy Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Ladybug.jpg" alt="عروسک کفشدوزک" loading="lazy"></div><h3>کفشدوزک</h3><p>از مجموعه Lazy Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Bean.jpg" alt="عروسک لوبیا سبز" loading="lazy"></div><h3>لوبیا سبز</h3><p>از مجموعه Garden Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Carrot.jpg" alt="عروسک هویج" loading="lazy"></div><h3>هویج</h3><p>از مجموعه Garden Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Corn.jpg" alt="عروسک ذرت" loading="lazy"></div><h3>ذرت</h3><p>از مجموعه Garden Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Fox.jpg" alt="عروسک روباه" loading="lazy"></div><h3>روباه</h3><p>از مجموعه Farm Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Chicken.jpg" alt="عروسک جوجه" loading="lazy"></div><h3>جوجه</h3><p>از مجموعه Farm Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Frog.jpg" alt="عروسک قورباغه" loading="lazy"></div><h3>قورباغه</h3><p>از مجموعه Farm Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Dolphin.jpg" alt="عروسک دلفین" loading="lazy"></div><h3>دلفین</h3><p>از مجموعه Sea Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Sea%20Lion.jpg" alt="عروسک شیر دریایی" loading="lazy"></div><h3>شیر دریایی</h3><p>از مجموعه Sea Friends</p></article>
-        <article class="card"><div class="product-img"><img src="images/Starfish.jpg" alt="عروسک ستاره دریایی" loading="lazy"></div><h3>ستاره دریایی</h3><p>در چند رنگ متفاوت</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="packs">
-    <div class="container">
-      <div class="section-head"><h2>شش پک فعلی</h2><p>بر اساس مجموعه‌هایی که در حال حاضر برای PiToys تعریف شده‌اند.</p></div>
-      <div class="packs">
-        <article class="pack"><img class="pack-image" src="images/Toothless%20Family.jpg" alt="پک Toothless Family" loading="lazy"><div class="pack-copy"><small>PACK 01</small><h3>Toothless Family</h3><p>Black • White • Baby Toothless</p></div></article>
-        <article class="pack"><img class="pack-image" src="images/Lazy%20Friends.jpg" alt="پک Lazy Friends" loading="lazy"><div class="pack-copy"><small>PACK 02</small><h3>Lazy Friends</h3><p>Panda • Koala • Ladybug</p></div></article>
-        <article class="pack"><img class="pack-image" src="images/Garden%20Friends.jpg" alt="پک Garden Friends" loading="lazy"><div class="pack-copy"><small>PACK 03</small><h3>Garden Friends</h3><p>Bean • Carrot • Corn</p></div></article>
-        <article class="pack"><img class="pack-image" src="images/Farm%20Friends.jpg" alt="پک Farm Friends" loading="lazy"><div class="pack-copy"><small>PACK 04</small><h3>Farm Friends</h3><p>Fox • Chicken • Frog</p></div></article>
-        <article class="pack"><img class="pack-image" src="images/Starfish%20Family.jpg" alt="پک Starfish Family" loading="lazy"><div class="pack-copy"><small>PACK 05</small><h3>Starfish Family</h3><p>Three color variations</p></div></article>
-        <article class="pack"><img class="pack-image" src="images/Sea%20Friends.jpg" alt="پک Sea Friends" loading="lazy"><div class="pack-copy"><small>PACK 06</small><h3>Sea Friends</h3><p>Dolphin • Sea Lion • Starfish</p></div></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container about">
-      <div class="about-box dark">
-        <small>ABOUT PiToys</small>
-        <h2>کوچک، خاص، قابل جمع‌آوری.</h2>
-        <p>PiToys روی ساخت اسباب‌بازی‌ها و عروسک‌های کوچک با تولید سه‌بعدی تمرکز دارد؛ محصولاتی که ظاهر ساده اما شخصیت مشخص دارند و بتوانند به‌صورت تکی یا پک‌های چندتایی عرضه شوند.</p>
-      </div>
-      <div class="about-box">
-        <h2>چرا 3D Printing؟</h2>
-        <p>چاپ سه‌بعدی اجازه می‌دهد طراحی‌های جدید سریع‌تر آزمایش شوند، رنگ‌ها و سری‌های مختلف ساخته شوند و محصولات در تیراژهای کوچک بدون قالب‌سازی سنگین تولید شوند.</p>
-        <div class="facts">
-          <div class="fact"><strong>3D</strong><span>تولید افزایشی</span></div>
-          <div class="fact"><strong>6</strong><span>پک محصول فعلی</span></div>
-          <div class="fact"><strong>17</strong><span>مدل فعلی</span></div>
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">کاتالوگ PiToys</p>
+          <h2 id="products-title">مدل موردعلاقه‌ات را پیدا کن</h2>
         </div>
+        <p>برای قیمت و موجودی روز، نام مدل را در پیام اینستاگرام بفرستید. اینجا قیمت یا شرایط فروشِ تأییدنشده درج نشده است.</p>
+      </div>
+      <div class="filter-bar" role="group" aria-label="فیلتر مدل‌ها بر اساس مجموعه">
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">همهٔ مدل‌ها</button>
+        <button class="filter-button" type="button" data-filter="toothless" aria-pressed="false">Toothless Family</button>
+        <button class="filter-button" type="button" data-filter="lazy" aria-pressed="false">Lazy Friends</button>
+        <button class="filter-button" type="button" data-filter="garden" aria-pressed="false">Garden Friends</button>
+        <button class="filter-button" type="button" data-filter="farm" aria-pressed="false">Farm Friends</button>
+        <button class="filter-button" type="button" data-filter="sea" aria-pressed="false">دوستان دریایی</button>
+      </div>
+      <p class="catalog-count" id="product-count" aria-live="polite">۱۴ مدل تصویردار</p>
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-product-card data-collection="toothless">
+          <div class="product-media"><img src="images/Black.jpg" alt="عروسک Toothless مشکی" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Toothless Family</span><h3>Toothless مشکی</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت Toothless مشکی در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="toothless">
+          <div class="product-media"><img src="images/White.jpg" alt="عروسک Toothless سفید" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Toothless Family</span><h3>Toothless سفید</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت Toothless سفید در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="lazy">
+          <div class="product-media"><img src="images/Panda.jpg" alt="عروسک پاندا" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Lazy Friends</span><h3>پاندا</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک پاندا در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="lazy">
+          <div class="product-media"><img src="images/Koala.jpg" alt="عروسک کوالا" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Lazy Friends</span><h3>کوالا</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک کوالا در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="lazy">
+          <div class="product-media"><img src="images/Ladybug.jpg" alt="عروسک کفشدوزک" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Lazy Friends</span><h3>کفشدوزک</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک کفشدوزک در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="garden">
+          <div class="product-media"><img src="images/Bean.jpg" alt="عروسک لوبیا" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Garden Friends</span><h3>لوبیا</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک لوبیا در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="garden">
+          <div class="product-media"><img src="images/Carrot.jpg" alt="عروسک هویج" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Garden Friends</span><h3>هویج</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک هویج در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="garden">
+          <div class="product-media"><img src="images/Corn.jpg" alt="عروسک ذرت" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Garden Friends</span><h3>ذرت</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک ذرت در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="farm">
+          <div class="product-media"><img src="images/Fox.jpg" alt="عروسک روباه" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Farm Friends</span><h3>روباه</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک روباه در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="farm">
+          <div class="product-media"><img src="images/Chicken.jpg" alt="عروسک جوجه" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Farm Friends</span><h3>جوجه</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک جوجه در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="farm">
+          <div class="product-media"><img src="images/Frog.jpg" alt="عروسک قورباغه" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Farm Friends</span><h3>قورباغه</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک قورباغه در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="sea">
+          <div class="product-media"><img src="images/Dolphin.jpg" alt="عروسک دلفین" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Sea Friends</span><h3>دلفین</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک دلفین در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="sea">
+          <div class="product-media"><img src="images/Sea%20Lion.jpg" alt="عروسک شیر دریایی" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Sea Friends</span><h3>شیر دریایی</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک شیر دریایی در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
+        <article class="product-card" data-product-card data-collection="sea">
+          <div class="product-media"><img src="images/Starfish.jpg" alt="عروسک ستاره دریایی" loading="lazy" decoding="async"></div>
+          <div class="product-copy"><span class="product-collection">Starfish Family</span><h3>ستاره دریایی</h3><a class="product-action" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer" aria-label="استعلام قیمت عروسک ستاره دریایی در اینستاگرام"><img src="assets/instagram.svg" alt="">استعلام این مدل</a></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section class="packs-section" id="packs" aria-labelledby="packs-title">
     <div class="container">
-      <div class="section-head"><h2>PiToys را دنبال کنید</h2><p>برای دیدن محصولات جدید، رنگ‌های تازه و اطلاع از عرضه‌ها، شبکه‌های اجتماعی PiToys را دنبال کنید.</p></div>
-      <div class="social">
-        <a class="social-card" href="https://www.instagram.com/pi.toys" target="_blank" rel="noopener">
-          <h3><img class="social-brand-icon" src="assets/instagram.svg" alt="">Instagram ↗</h3><p>@pi.toys</p><small>محل اصلی نمایش محصولات و تصاویر</small>
-        </a>
-        <a class="social-card" href="https://t.me/pi_toys" target="_blank" rel="noopener">
-          <h3><img class="social-brand-icon" src="assets/telegram.svg" alt="">Telegram ↗</h3><p>@pi_toys</p><small>کانال PiToys — Tiny Toys, Big Smiles!</small>
-        </a>
+      <div class="section-heading">
+        <div><p class="section-kicker">مجموعه‌های موضوعی</p><h2 id="packs-title">پک‌های PiToys</h2></div>
+        <p>ترکیب هر پک را در تصویر ببینید؛ برای اطلاع از موجودی و امکان سفارش، مستقیم پیام بدهید.</p>
+      </div>
+      <div class="pack-grid">
+        <article class="pack-card"><img class="pack-image" src="images/Toothless%20Family.jpg" alt="عروسک‌های پک Toothless Family" loading="lazy" decoding="async"><div class="pack-copy"><span class="pack-number">PACK 01</span><h3>Toothless Family</h3><p>Black · White · Baby Toothless</p></div></article>
+        <article class="pack-card"><img class="pack-image" src="images/Lazy%20Friends.jpg" alt="عروسک‌های پک Lazy Friends" loading="lazy" decoding="async"><div class="pack-copy"><span class="pack-number">PACK 02</span><h3>Lazy Friends</h3><p>Panda · Koala · Ladybug</p></div></article>
+        <article class="pack-card"><img class="pack-image" src="images/Garden%20Friends.jpg" alt="عروسک‌های پک Garden Friends" loading="lazy" decoding="async"><div class="pack-copy"><span class="pack-number">PACK 03</span><h3>Garden Friends</h3><p>Bean · Carrot · Corn</p></div></article>
+        <article class="pack-card"><img class="pack-image" src="images/Farm%20Friends.jpg" alt="عروسک‌های پک Farm Friends" loading="lazy" decoding="async"><div class="pack-copy"><span class="pack-number">PACK 04</span><h3>Farm Friends</h3><p>Fox · Chicken · Frog</p></div></article>
+        <article class="pack-card"><img class="pack-image" src="images/Starfish%20Family.jpg" alt="عروسک‌های رنگی پک Starfish Family" loading="lazy" decoding="async"><div class="pack-copy"><span class="pack-number">PACK 05</span><h3>Starfish Family</h3><p>Three color variations</p></div></article>
+        <article class="pack-card"><img class="pack-image" src="images/Sea%20Friends.jpg" alt="عروسک‌های پک Sea Friends" loading="lazy" decoding="async"><div class="pack-copy"><span class="pack-number">PACK 06</span><h3>Sea Friends</h3><p>Dolphin · Sea Lion · Starfish</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="container story-grid">
+      <article class="story-panel dark">
+        <span class="story-label">درباره PiToys</span>
+        <h2 id="about-title">کوچک، رنگی و ساخته‌شده برای جمع‌آوری.</h2>
+        <p>PiToys مجموعه‌ای از عروسک‌های کوچک با طراحی فانتزی و تولید سه‌بعدی است؛ می‌توانید مدل‌ها را تکی ببینید یا از بین پک‌های موضوعی انتخاب کنید.</p>
+      </article>
+      <article class="story-panel">
+        <span class="story-label">مسیر سفارش</span>
+        <h2>از دیدن مدل تا هماهنگی سفارش</h2>
+        <p>قیمت، موجودی، روش پرداخت و جزئیات ارسال در سایت اعلام نشده‌اند؛ پیش از پرداخت آن‌ها را از راه ارتباطی رسمی تأیید کنید.</p>
+        <div class="process-list">
+          <div class="process-step"><strong>۱. انتخاب</strong><span>نام مدل یا پک را از کاتالوگ پیدا کنید.</span></div>
+          <div class="process-step"><strong>۲. استعلام</strong><span>برای قیمت و موجودی پیام بدهید.</span></div>
+          <div class="process-step"><strong>۳. هماهنگی</strong><span>شرایط سفارش و ارسال را پیش از پرداخت نهایی کنید.</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="section-kicker">پیش از سفارش</p><h2 id="faq-title">راهنمای کوتاه خرید</h2></div>
+        <p>اطلاعات سفارش را مستقیم و به‌روز از PiToys دریافت کنید.</p>
+      </div>
+      <div class="faq-list">
+        <details><summary>قیمت و موجودی هر مدل را از کجا بپرسم؟</summary><p>روی «استعلام این مدل» بزنید و نام مدل را در پیام اینستاگرام بفرستید تا قیمت و موجودی همان روز را بپرسید.</p></details>
+        <details><summary>هزینه و زمان ارسال یا روش پرداخت چیست؟</summary><p>این اطلاعات در سایت درج نشده است. قبل از پرداخت، روش پرداخت، هزینه و زمان ارسال و شرایط نهایی سفارش را مستقیم هماهنگ کنید.</p></details>
+        <details><summary>ابعاد، جنس و مناسب‌بودن برای چه سنی را چطور بدانم؟</summary><p>مشخصات فنی و ردهٔ سنی در این کاتالوگ اعلام نشده‌اند؛ برای دریافت اطلاعات تأییدشدهٔ هر مدل، پیش از سفارش پیام بدهید.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-band" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-inner">
+      <div><h2 id="contact-title">مدلی انتخاب کردی؟</h2><p>برای استعلام قیمت و موجودی به اینستاگرام پیام بده؛ خبر مجموعه‌های تازه را هم در تلگرام ببین.</p></div>
+      <div class="social-links">
+        <a class="social-link" href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer"><img src="assets/instagram.svg" alt="">Instagram <bdi dir="ltr">@pi.toys</bdi></a>
+        <a class="social-link" href="https://t.me/pi_toys" target="_blank" rel="noopener noreferrer"><img src="assets/telegram.svg" alt="">Telegram <bdi dir="ltr">@pi_toys</bdi></a>
       </div>
     </div>
   </section>
 </main>
 
-<a class="floating" href="https://www.instagram.com/pi.toys" target="_blank" rel="noopener">مشاهده PiToys در اینستاگرام</a>
-
-<footer>
-  <div class="container foot">
-    <span>© <span id="year"></span> PiToys</span>
-    <span>Tiny Toys, Big Smiles! :)</span>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year">۱۴۰۵</span> PiToys · Tiny Toys, Big Smiles!</span>
+    <div class="footer-links"><a href="#products">مدل‌ها</a><a href="#faq">راهنمای سفارش</a><a href="https://www.instagram.com/pi.toys/" target="_blank" rel="noopener noreferrer">اینستاگرام</a></div>
   </div>
 </footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
